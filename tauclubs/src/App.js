@@ -23,11 +23,10 @@ function App() {
 
         </a>
           <h4> App Component </h4>
-          <Navbar title = "User App"/>
+          <Navbar/>
           <hr/>
           <User
           name = "Mustafa Murat Coşkun"
-          salary = "5000"
           department = "Bilişim"
           />
           <User
