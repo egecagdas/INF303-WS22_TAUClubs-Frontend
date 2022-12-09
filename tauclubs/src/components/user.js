@@ -6,13 +6,11 @@ class User extends Component{
 
         return (
             <div>
-                <form>
-                    <input type = 'text'/>
-                    <button>Gönder</button>
-                    <Button variant="contained">Contained</Button>
-                    <Button variant="outlined">Outlined</Button>
-                </form>
-
+                <ul>
+                    <li>İsim: Mustafa Murat Coşkun</li>
+                    <li>Departman: Bilişim</li>
+                    <li>Maaş: 5000</li>
+                </ul>
             </div>
         )
     }

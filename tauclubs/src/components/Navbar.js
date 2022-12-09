@@ -2,12 +2,12 @@ import React from "react";
 
 
 //Functional Component
-const Navbar = () => {
+const Navbar = (props) => {
 
     return (
 
         <div>
-            <h3> User App </h3>
+            <h3>{props.title}</h3>
         </div>
     )
 }

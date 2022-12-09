@@ -12,7 +12,7 @@ function App() {
        
         <p>
          TAUCLUBS
-        
+
         </p>
         <a
           className="App-link"
@@ -20,11 +20,13 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-         
+
         </a>
           <h4> App Component </h4>
-           <User/>
-          <Navbar/>
+          <Navbar title = "User App"/>
+          <hr/>
+          <User/>
+
 
       </header>
 
