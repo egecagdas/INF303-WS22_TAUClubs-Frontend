@@ -4,12 +4,14 @@ import Button from '@mui/material/Button';
 class User extends Component{
     render() {
 
+        // Destructing
+        const {name,department,salary} = this.props;
         return (
             <div>
                 <ul>
-                    <li>İsim: Mustafa Murat Coşkun</li>
-                    <li>Departman: Bilişim</li>
-                    <li>Maaş: 5000</li>
+                    <li>İsim: {name}</li>
+                    <li>Departman: {this.props.department}</li>
+                    <li>Maaş: {this.props.salary}</li>
                 </ul>
             </div>
         )
