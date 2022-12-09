@@ -21,7 +21,7 @@ function App() {
         >
          
         </a>
-          <h4> App Component </h4>
+          <h4 style={{color:"red",fontSize:"10px"}}> App Component </h4>
            <User/>
 
       </header>
