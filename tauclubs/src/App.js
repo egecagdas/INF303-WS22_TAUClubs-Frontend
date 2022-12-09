@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import User from './components/user';
 import Navbar from './components/Navbar';
+import Home from './components/Home'
 
 function App() {
     const test = 34;
@@ -34,6 +35,7 @@ function App() {
           salary = "6000"
           department = "Bilişim"
           />
+          <Home/>
 
 
       </header>
