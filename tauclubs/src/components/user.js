@@ -4,7 +4,6 @@ import {PropTypes2} from "@mui/material";
 import PropTypes from "prop-types";
 import Navbar from "./Navbar";
 
-
 class User extends Component{
    //User.defaultProps u static olarakta tanımlayabiliriz
     static defaultProps = {
