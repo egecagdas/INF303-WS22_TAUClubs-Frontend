@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import User from './components/user';
+import Navbar from './components/Navbar';
 
 function App() {
     const test = 34;
@@ -21,8 +22,9 @@ function App() {
         >
          
         </a>
-          <h4 className={"header"}> App Component </h4>
+          <h4> App Component </h4>
            <User/>
+          <Navbar/>
 
       </header>
 
