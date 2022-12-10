@@ -13,7 +13,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }*/
-
+#pond {
+  display: flex;
+  width: 78px;
+  left: 13px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
 .App-header {
   background-color: #52ade5;
   min-height: 100vh;
@@ -46,3 +53,52 @@
   color : bisque;
   font-size: 20px;
 }
+.text-4 {
+  text-align:left;
+  vertical-align: top;
+  horiz-align: left;
+  font-size: 54px;
+  font-family: Jomhuria;
+  line-height: auto;
+  color: #49c4ae;
+}
+
+.card-header {
+  text-align:left;
+  vertical-align: top;
+  horiz-align: left;
+  font-size: 32px;
+  font-family: Jomhuria;
+  line-height: auto;
+  background: #cff6f4;
+  color: #4AC5AE;
+}
+
+.button-home{
+  display: flex;
+  justify-content: flex-end;
+
+
+  font-family: Jomhuria;
+  line-height: auto;
+  background: #cff6f4;
+  color: #4AC5AE;
+}
+
+.navbar a{
+  padding: 15px;
+  text-decoration: none;
+  color: #4AC5AE;
+
+}
+.navbar a:hover{
+  color: black;
+
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+

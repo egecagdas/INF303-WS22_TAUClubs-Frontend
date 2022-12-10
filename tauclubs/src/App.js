@@ -3,18 +3,37 @@ import './App.css';
 import User from './components/user';
 import Navbar from './components/Navbar';
 import Home from './components/Home'
+import Button from "@mui/material/Button";
+import BottomNavigation from './components/BottomNavigation'
 
 function App() {
     const test = 34;
     const isAuth = true;
   return (
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-         TAUCLUBS
+    <div>
+      <header className="header">
+          <header className="card-header">
 
-        </p>
+
+              <div className="navbar d-flex justify-content-between ">
+                  <h1 className="sitename m-0">
+
+                      TAUCLUBS
+                  </h1>
+                  <nav>
+                      <ul className="d-flex">
+                          <li><a href="#home">Home</a></li>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#rooms">Rooms</a></li>
+                          <li><a href="blogs.html">Blog</a></li>
+                          <li><a href="#contact">Contact</a></li>
+                      </ul>
+                  </nav>
+              </div>
+
+
+          </header>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -35,7 +54,7 @@ function App() {
           salary = "6000"
           department = "Bilişim"
           />
-          <Home/>
+
 
 
       </header>
