@@ -20,6 +20,6 @@ Navbar.propTypes = {
 //Eğer istenen props gönderilmezse default ayarlanır
 
 Navbar.defaultProps = {
-    title: "Default App"
+    //title: "Default App"
 }
 export default Navbar;

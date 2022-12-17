@@ -47,11 +47,11 @@
 }*/
 
 
-
 .header {
-
-  color : bisque;
-  font-size: 20px;
+  font-family: Cambria;
+  color : rgb(7, 5, 2);
+  font-size: 50px;
+  text-align: center;
 }
 .text-4 {
   text-align:left;
@@ -68,7 +68,7 @@
   vertical-align: top;
   horiz-align: left;
   font-size: 32px;
-  font-family: Jomhuria;
+  font-family: Cambria;
   line-height: auto;
   background: #cff6f4;
   color: #4AC5AE;
@@ -79,7 +79,7 @@
   justify-content: flex-end;
 
 
-  font-family: Jomhuria;
+  font-family: Cambria;
   line-height: auto;
   background: #cff6f4;
   color: #4AC5AE;
@@ -87,9 +87,9 @@
 
 .navbar a{
   padding: 15px;
-  text-decoration: none;
+  text-decoration:none;
   color: #4AC5AE;
-
+  font-family:Cambria;
 }
 .navbar a:hover{
   color: black;
@@ -97,8 +97,33 @@
 }
 
 ul{
+  
   list-style: none;
   margin: 0;
   padding: 0;
 }
+b{
+  font-family: Cambria;
+  font-weight: bold;
+}
+c{
+  font-family: Cambria;
+  font-weight:lighter;
+}
+t{
+  font-weight: bold;
+  color: #52ade5;
+  text-shadow: 1px 1px 2px pink;
+}
+article{
+  font-family: Cambria;
+  font-size: medium;
+  text-align:left;
+  font-size: 70px;
+  padding: 1em;
+}
+.button1 {
+  background-color: #58a4fb;
+  
+} /* Green */
 
