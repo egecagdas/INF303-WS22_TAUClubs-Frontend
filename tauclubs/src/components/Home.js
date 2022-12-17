@@ -1,28 +1,16 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
-function HomeIcon(props: SvgIconProps) {
+export default function BasicButtons() {
+  //örnek butonlar için denendi
   return (
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
+    <Stack spacing={2} direction="row">
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+    </Stack>
   );
-}
 
-export default function SvgIconsSize() {
-  return (
-    <Box
-      sx={{
-        '& > :not(style)': {
-          m: 2,
-        },
-      }}
-    >
-      <HomeIcon fontSize="small" />
-      <HomeIcon />
-      <HomeIcon fontSize="large" />
-      <HomeIcon sx={{ fontSize: 40 }} />
-    </Box>
-  );
+
 }
