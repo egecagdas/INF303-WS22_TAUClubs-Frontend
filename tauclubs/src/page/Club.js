@@ -1,7 +1,28 @@
 import "../App.css";
-import Post from "../components/Post";
+import PostList from "../components/PostList";
+import { useParams } from "react-router-dom";
+import { Component } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 
-const Club = () => {
+function Club() {
+  let { id } = useParams();
+
+  let [club, setClub] = useState({});
+
+  useEffect(() => {
+    let data;
+    axios
+      .get("http://localhost:8000/clubs/" + id + "/")
+      .then((res) => {
+        data = res.data;
+        console.log(data);
+        setClub(data);
+        console.log(club);
+      })
+      .catch((err) => {});
+  }, []);
+
   return (
     <body>
       <nav className="header">
@@ -40,9 +61,9 @@ const Club = () => {
                 {/* <div className="clubInfo"> */}
 
                 <div>
-                  <section className="clubName">Club Name</section>
+                  <section className="clubName">{club.name}</section>
                   <section className="clubDescription">
-                    Teknoloji, yazılım ve bilgisayar kulübü
+                    {club.description}
                   </section>
 
                   <div className="text-align-center px-5 py-2">
@@ -53,6 +74,16 @@ const Club = () => {
                   <div className="text-align-center px-5 py-2">
                     <a href="#" class="btn btn-dark btn-block">
                       Be a member
+                    </a>
+                  </div>
+                  <div className="text-align-center px-5 py-2">
+                    <a
+                      href="https://www.instagram.com/infxofficial/"
+                      target="_blank"
+                      className="btn icon"
+                    >
+                      <i class="fa-brands fa-instagram"></i>
+                      <span className="pl-2">Instagram</span>
                     </a>
                   </div>
                 </div>
@@ -91,9 +122,7 @@ const Club = () => {
                 </div>
 
                 <div>
-                  <div className="postList">
-                    <Post></Post>
-                  </div>
+                  <PostList club_id={id} clubname={club.name} />
                 </div>
               </div>
             </div>
@@ -102,7 +131,7 @@ const Club = () => {
       </main>
     </body>
   );
-};
+}
 export default Club;
 
 {

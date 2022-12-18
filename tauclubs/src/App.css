@@ -182,3 +182,15 @@ article{
 .container {
   max-width: 1330px;
 }
+
+.icon {
+  margin-left: 30px;
+}
+
+.icon i{
+  font-size: 1.5rem;
+}
+
+.icon span{
+  font-size: 20px;
+}

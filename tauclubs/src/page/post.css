@@ -96,7 +96,8 @@ img {
 }
 
 .user__image {
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  height: 60px;
 }
 
 .user__info > small {

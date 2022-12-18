@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./page/Home";
@@ -9,9 +8,9 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home></Home>} />
-        <Route path="/Clubs" element={<Club />} />
+        <Route path="/Clubs/:id" element={<Club />} />
       </Routes>
-    </BrowserRouter>  
+    </BrowserRouter>
   );
 }
 //export default App;

@@ -27,11 +27,7 @@ class Post extends Component {
           </div>
           <div class="card__footer">
             <div class="user">
-              <img
-                src="https://i.pravatar.cc/40?img=1"
-                alt="user__image"
-                class="user__image"
-              />
+              <img src="taulogo.png" alt="user__image" class="user__image" />
               <div class="user__info">
                 <h5>{club}</h5>
                 <small>{time}</small>
