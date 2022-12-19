@@ -1,6 +1,7 @@
+import React, { Component } from "react";
 class Register extends Component {
   state = {
-    credentials: { username: "", password: "" },
+    credentials: { email: "", password1: "", password2: "" },
   };
 
   register = (event) => {
@@ -11,7 +12,7 @@ class Register extends Component {
     })
       .then((data) => data.json())
       .then((data) => {
-        console.log(data.token);
+        console.log(this.state.credentials);
       })
       .catch((error) => console.error(error));
   };
@@ -27,21 +28,31 @@ class Register extends Component {
         <h1>Register user form</h1>
 
         <label>
-          Username:
+          Email:
           <input
             type="text"
-            name="username"
-            value={this.state.credentials.username}
+            name="email"
+            value={this.state.credentials.email}
             onChange={this.inputChanged}
           />
         </label>
         <br />
         <label>
-          Password:
+          Password1:
           <input
             type="password"
-            name="password"
-            value={this.state.credentials.password}
+            name="password1"
+            value={this.state.credentials.password1}
+            onChange={this.inputChanged}
+          />
+        </label>
+        <br />
+        <label>
+          Password2:
+          <input
+            type="password"
+            name="password2"
+            value={this.state.credentials.password2}
             onChange={this.inputChanged}
           />
         </label>

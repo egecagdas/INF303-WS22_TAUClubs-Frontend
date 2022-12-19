@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Button from "@mui/material/Button";
 import BottomNavigation from "../components/BottomNavigation";
 import Login from "../components/login";
+import Register from "../components/register";
 
 const Home = () => {
   //const test = 34;
@@ -55,6 +56,7 @@ const Home = () => {
             <button className="myButton">Join </button>
           </div>
         </div>
+        <Register />
       </header>
     </div>
   );
