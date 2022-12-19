@@ -2,15 +2,16 @@ import React, { Component } from "react";
 
 class Login extends Component {
   state = {
-    credentials: { username: "", password: "" },
+    credentials: { email: "", password: "" },
   };
 
   login = (event) => {
-    fetch("http://127.0.0.1:8000/auth/login", {
+    fetch("http://127.0.0.1:8000/dj-rest-auth/login/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state.credentials),
     })
+      .then(console.log(this.state.credentials))
       .then((data) => data.json())
       .then((data) => {
         this.props.userLogin(data.token);
@@ -30,11 +31,11 @@ class Login extends Component {
         <h1>Login user form</h1>
 
         <label>
-          Username:
+          Email:
           <input
             type="text"
-            name="username"
-            value={this.state.credentials.username}
+            name="email"
+            value={this.state.credentials.email}
             onChange={this.inputChanged}
           />
         </label>

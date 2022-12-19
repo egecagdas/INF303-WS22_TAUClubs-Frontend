@@ -56,7 +56,6 @@ const Home = () => {
             <button className="myButton">Join </button>
           </div>
         </div>
-        <Register />
       </header>
     </div>
   );
