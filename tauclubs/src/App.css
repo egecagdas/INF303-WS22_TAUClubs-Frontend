@@ -1,5 +1,5 @@
 .App {
-  text-align:center;
+  text-align: center;
 }
 
 /*.App-logo {
@@ -46,15 +46,14 @@
   }
 }*/
 
-
 .header {
   font-family: Cambria;
-  color : rgb(7, 5, 2);
+  color: rgb(7, 5, 2);
   font-size: 50px;
   text-align: center;
 }
 .text-4 {
-  text-align:left;
+  text-align: left;
   vertical-align: top;
   horiz-align: left;
   font-size: 54px;
@@ -64,87 +63,84 @@
 }
 
 .card-header {
-  text-align:left;
+  text-align: left;
   vertical-align: top;
   horiz-align: left;
   font-size: 32px;
   font-family: Cambria;
   line-height: auto;
   background: #cff6f4;
-  color: #4AC5AE;
+  color: #4ac5ae;
 }
 
-.button-home{
+.button-home {
   display: flex;
   justify-content: flex-end;
-
 
   font-family: Cambria;
   line-height: auto;
   background: #cff6f4;
-  color: #4AC5AE;
+  color: #4ac5ae;
 }
 
-.navbar a{
+.navbar a {
   padding: 15px;
-  text-decoration:none;
-  color: #4AC5AE;
-  font-family:Cambria;
+  text-decoration: none;
+  color: #4ac5ae;
+  font-family: Cambria;
 }
-.navbar a:hover{
+.navbar a:hover {
   color: black;
-
 }
 
-ul{
-  
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-b{
+b {
   font-family: Cambria;
   font-weight: bold;
 }
-c{
+c {
   font-family: Cambria;
-  font-weight:lighter;
+  font-weight: lighter;
 }
-t{
+t {
   font-weight: bold;
   color: #52ade5;
   text-shadow: 1px 1px 2px pink;
 }
-article{
+article {
   font-family: Cambria;
   font-size: medium;
-  text-align:left;
+  text-align: left;
   font-size: 70px;
   padding: 1em;
 }
 
 .myButton {
-	box-shadow: 0px 10px 14px -7px #276873;
-	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-	background-color:#599bb3;
-	border-radius:8px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:13px 32px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #3d768a;
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-  background-color:#408c99;
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
 }
 .myButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .clubInfo {
@@ -156,7 +152,7 @@ article{
 
 .clubInfo .clubName {
   font-family: Cambria;
-  text-align:center;
+  text-align: center;
   font-size: 40px;
   padding: 0 1em 1em 1em;
   /* padding: 1em; */
@@ -172,25 +168,34 @@ article{
 }
 
 .postList {
-  background-color: #e1e0e0;
+  background-color: #ffffff;
   height: 70vh;
-  border: 1px solid #d2d2d2;
-  border-radius: 3px;
+  /* border: 1px solid #d2d2d2;
+  border-radius: 3px; */
   width: 100%;
 }
 
+.title {
+  font-family: Cambria;
+  text-align: left;
+  font-size: 40px;
+  padding: 0;
+  /* padding: 1em; */
+  font-weight: 600;
+}
+
 .container {
-  max-width: 1330px;
+  max-width: 1310px;
 }
 
 .icon {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
-.icon i{
+.icon i {
   font-size: 1.5rem;
 }
 
-.icon span{
+.icon span {
   font-size: 20px;
 }

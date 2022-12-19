@@ -29,7 +29,7 @@ function Club() {
         <header className="card-header align-items-center p-5">
           <div className="container navbar d-flex justify-content-between ">
             <h1 className="sitename m-0">
-              <a href="/">
+              <a className="px-0" href="/">
                 <b>TAU</b>
                 <c>Clubs</c>
               </a>
@@ -41,7 +41,7 @@ function Club() {
                 </li>
 
                 <li>
-                  <a href="#Clubs">Clubs</a>
+                  <a href="/Clubs">Clubs</a>
                 </li>
 
                 <li>
@@ -57,7 +57,7 @@ function Club() {
         <div className="container my-4">
           <div className="row gx-10">
             <div className="col-md-3">
-              <div className="clubInfo d-flex align-items-center shadow">
+              <div className="clubInfo d-flex align-items-center shadow justify-content-center">
                 {/* <div className="clubInfo"> */}
 
                 <div>
