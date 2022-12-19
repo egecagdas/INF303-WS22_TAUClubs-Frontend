@@ -44,7 +44,7 @@ function Clubs() {
                 </li>
 
                 <li>
-                  <a href="#Sign in">Sign in</a>
+                  <a href="#Login">Login</a>
                 </li>
               </ul>
             </nav>
