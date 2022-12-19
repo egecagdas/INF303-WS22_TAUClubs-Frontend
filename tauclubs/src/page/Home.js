@@ -1,6 +1,10 @@
 import '../App.css';
+import logo from '../logo.svg';
+import User from '../components/user';
+import Navbar from '../components/Navbar';
 //import Home from './components/Home'
-
+import Button from "@mui/material/Button";
+import BottomNavigation from '../components/BottomNavigation'
 
 const Home = () => {
 
@@ -49,7 +53,7 @@ const Home = () => {
           </article>
           <div> 
                 <button className="myButton">Join us</button>
-                <button className="myButton">Find your Club </button>
+                <button className="myButton">Find your Clubs </button>
           </div>
         </div>  
         
