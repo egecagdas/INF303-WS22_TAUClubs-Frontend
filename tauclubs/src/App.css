@@ -73,6 +73,10 @@
   color: #4ac5ae;
 }
 
+.card:hover {
+  box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 30%);
+}
+
 .button-home {
   display: flex;
   justify-content: flex-end;
@@ -199,5 +203,3 @@ article {
 .icon span {
   font-size: 20px;
 }
-
-
