@@ -51,10 +51,15 @@ const Home = () => {
               <p>Find  <t>yourself</t></p>  
               
           </article>
-          <div> 
+          <b1>
+            <div> 
+                  <button className="myButton">Find your Clubs </button>
+            </div>
+            <div>
                 <button className="myButton">Join us</button>
-                <button className="myButton">Find your Clubs </button>
-          </div>
+            </div>
+          </b1>
+          
         </div>  
         
       </header>

@@ -1,11 +1,7 @@
 import "./login.css";
-import { useParams } from "react-router-dom";
-import { Component } from "react";
 import "../App.css";
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+
 
 
 
@@ -43,24 +39,27 @@ function Login() {
             </nav>
 
             <main>
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required />
+                <div className="container d-flex justify-content-center ">
+                <div class= "formconteiner">
+                    <div>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Email" name="email" required />
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required />
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="****" name="psw" required />
 
-                    <button type="submit">Login</button>
-                    <label>
-                    <input type="checkbox" checked="checked" name="remember" /> Remember me
-                    </label>
+                        <button type="submit">Login</button>
+                        <label>
+                        <input type="checkbox" checked="checked" name="remember" />Remember me
+                        </label>
+                    </div>
+
+                    <div>
+                        
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                    </div>
                 </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-
             </main>
         
 

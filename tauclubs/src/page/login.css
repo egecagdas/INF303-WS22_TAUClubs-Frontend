@@ -1,4 +1,4 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Cambria;}
 form {border: 3px solid #f1f1f1;}
 input[type=text], input[type=password] {
     width: 100%;
@@ -8,23 +8,51 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-.cancelbtn {
+span.psw {
+    float: left;
+    padding-top: 16px;
+}
+[type=checkbox]:after {
+    
+    margin-left: 15px;
+    vertical-align: text-top;
+    white-space:normal;
+    display: inline-block;
+}
+
+/*.cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
-}
+    background-color: #3672f4;
+}*/
 
 
 button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}  
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Cambria;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 22px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+} 
+button:hover {
+    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    background-color: #408c99;
+  } 
 .container {
   padding: 16px;
+  
+}
+.formconteiner{
+    max-width: 800px;
+    
+    margin:auto 0 ;
 }
 
