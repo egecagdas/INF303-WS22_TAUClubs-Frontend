@@ -25,7 +25,7 @@ const Home = () => {
                   </h1>
                   <nav>
                       <ul className="d-flex">
-                          <li><a href="#Event">Event</a></li>
+                          <li><a href="/Event">Event</a></li>
                           
                           <li><a href="Clubs">Clubs</a></li>
                           
