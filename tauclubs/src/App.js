@@ -6,6 +6,7 @@ import Club from "./page/Club";
 import Clubs from "./page/Clubs";
 import Login from "./page/Login";
 import Events from './page/Events';
+import JoinUs from './page/JoinUs';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Clubs" element={<Club />} />
         <Route path="/Event" element={<Events />} />
+        <Route path="/JoinUs" element={<JoinUs />} />
       </Routes>
     </BrowserRouter>
   

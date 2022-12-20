@@ -59,7 +59,9 @@ const Home = () => {
               </Link>
             </div>
             <div>
-              <button className="myButton">Join us</button>
+              <Link to= "/JoinUs">
+              <button className="myButton" href = "JoinUs">Join Us</button>
+              </Link>
             </div>
           </b1>
         </div>
