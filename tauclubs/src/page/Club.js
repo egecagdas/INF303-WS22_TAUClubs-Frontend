@@ -37,7 +37,7 @@ function Club() {
             <nav>
               <ul className="d-flex">
                 <li>
-                  <a href="#Event">Event</a>
+                  <a href="/Event">Event</a>
                 </li>
 
                 <li>

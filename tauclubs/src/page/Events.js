@@ -50,7 +50,7 @@ const Events = () => {
         <div className="container my-4">
           <div className="row gx-10">
             <div className="col-md-3">
-              <div className="EventInfo d-flex align-items-center shadow justify-content-center">
+              <box className="EventInfo d-flex align-items-center shadow justify-content-center">
                 {/* <div className="clubInfo"> */}
 
                 <div>
@@ -62,8 +62,8 @@ const Events = () => {
                   
                 </div>
                
-              </div>
-              <div className="EventInfo d-flex align-items-center shadow">
+              </box>
+              <box className="EventInfo d-flex align-items-center shadow">
 
                 
                 <div>
@@ -75,13 +75,25 @@ const Events = () => {
 
                   
                 </div>
-              </div>
+              </box>
 
               
             </div>
            <div className="col-md-9">
               
                 It's me.. Hi! I'm the problem. It's me.
+                <div className="card mb-2 shadow">
+                      <div className="row d-flex justify-content-center">
+                            <div className="col">
+                                    <div className="card-body">
+                                        <h5 className="card-title">Card Title</h5>
+                                        <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ipsam quo ab doloribus doloremque. Fugiat!</p>
+                                    </div>  
+                                
+                            </div>
+                      </div>  
+                </div>
+
                   
            </div>
             
