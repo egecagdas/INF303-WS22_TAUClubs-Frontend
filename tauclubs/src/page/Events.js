@@ -50,7 +50,7 @@ const Events = () => {
         <div className="container my-4">
           <div className="row gx-10">
             <div className="col-md-3">
-              <box className="EventInfo d-flex align-items-center shadow justify-content-center">
+              <box className="EventInfo d-flex align-items-center shadow justify-content-center mb-4">
                 {/* <div className="clubInfo"> */}
 
                 <div>
@@ -63,14 +63,14 @@ const Events = () => {
                 </div>
                
               </box>
-              <box className="EventInfo d-flex align-items-center shadow">
+              <box className="EventInfo d-flex align-items-center shadow justify-content-center">
 
                 
                 <div>
                   <section className="Follow">{"Followed Clubs"}</section>
-                  <ul className='d-flex justify-content-center'>
-                    <li >{"Informatix"}</li>
-                    <li >{"EMK"}</li>
+                  <ul>
+                    <li className='text-center'>{"Informatix"}</li>
+                    <li className='text-center'>{"EMK"}</li>
                   </ul>
 
                   
@@ -82,7 +82,7 @@ const Events = () => {
            <div className="col-md-9">
               
                 It's me.. Hi! I'm the problem. It's me.
-                <div className="card mb-2 shadow">
+                {/* <div className="card mb-2 m-auto shadow">
                       <div className="row d-flex justify-content-center">
                             <div className="col">
                                     <div className="card-body">
@@ -92,7 +92,9 @@ const Events = () => {
                                 
                             </div>
                       </div>  
-                </div>
+                </div> */}
+
+                <PostList/>
 
                   
            </div>

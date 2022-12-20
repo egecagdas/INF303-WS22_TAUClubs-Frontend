@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/Event" element={<Events />} />
       </Routes>
     </BrowserRouter>
-    </BrowserRouter>  
+  
   );
 }
 //export default App;
