@@ -10,6 +10,28 @@ function Club() {
 
   let [club, setClub] = useState({});
 
+  // const followclub = (club) => {
+
+  //   let data;
+  //   axios
+  //     .get("http://localhost:8000/clubs/" + id + "/follow")
+  //     .then((response) => {
+  //       data = response.data;
+  //       console.log(data);
+  //     });
+  // };
+
+  // const bemamber = (club) => {
+
+  //   let data;
+  //   axios
+  //     .get("http://localhost:8000/clubs/" + id + "/membership")
+  //     .then((response) => {
+  //       data = response.data;
+  //       console.log(data);
+  //     });
+  // };
+
   useEffect(() => {
     let data;
     axios
@@ -67,7 +89,11 @@ function Club() {
                   </section>
 
                   <div className="text-align-center px-5 py-2">
-                    <a href="#" class="btn btn-dark btn-block">
+                    <a
+                      href="#"
+                      class="btn btn-dark btn-block"
+                      // onClick={() => followclub(club)}
+                    >
                       Follow
                     </a>
                   </div>

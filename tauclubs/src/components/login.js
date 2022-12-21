@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Cookies from "universal-cookie";
 
 class Login extends Component {
   state = {
