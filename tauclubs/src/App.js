@@ -1,12 +1,11 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./page/Home";
 import Club from "./page/Club";
 import Clubs from "./page/Clubs";
 import Login from "./page/Login";
-import Events from './page/Events';
-import JoinUs from './page/JoinUs';
+import Events from "./page/Events";
+import JoinUs from "./page/JoinUs";
 
 export default function App() {
   return (
@@ -21,7 +20,6 @@ export default function App() {
         <Route path="/JoinUs" element={<JoinUs />} />
       </Routes>
     </BrowserRouter>
-  
   );
 }
 //export default App;

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 class Register extends Component {
   state = {
     credentials: { email: "", password1: "", password2: "" },
@@ -25,39 +27,45 @@ class Register extends Component {
   render() {
     return (
       <div>
-        <h1>Register user form</h1>
-
-        <label>
+        <label className="w-100">
           Email:
           <input
             type="text"
             name="email"
+            placeholder="Email"
+            required
             value={this.state.credentials.email}
             onChange={this.inputChanged}
           />
         </label>
         <br />
-        <label>
-          Password1:
+        <label className="w-100">
+          Password:
           <input
             type="password"
             name="password1"
+            placeholder="Password"
+            required
             value={this.state.credentials.password1}
             onChange={this.inputChanged}
           />
         </label>
         <br />
-        <label>
-          Password2:
+        <label className="w-100">
+          Password again:
           <input
             type="password"
             name="password2"
+            placeholder="Password again"
+            required
             value={this.state.credentials.password2}
             onChange={this.inputChanged}
           />
         </label>
         <br />
-        <button onClick={this.register}>Register</button>
+        {/* <Link to="/Login"> */}
+        <button onClick={this.register}>Submit</button>
+        {/* </Link> */}
       </div>
     );
   }

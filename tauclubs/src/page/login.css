@@ -1,23 +1,27 @@
-body {font-family: Cambria;}
-form {border: 3px solid #f1f1f1;}
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+body {
+  font-family: Cambria;
+}
+form {
+  border: 3px solid #f1f1f1;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 span.psw {
-    float: left;
-    padding-top: 16px;
+  float: left;
+  padding-top: 16px;
 }
-[type=checkbox]:after {
-    
-    margin-left: 15px;
-    vertical-align: text-top;
-    white-space:normal;
-    display: inline-block;
+[type="checkbox"]:after {
+  margin-left: 15px;
+  vertical-align: text-top;
+  white-space: normal;
+  display: inline-block;
 }
 
 /*.cancelbtn {
@@ -25,7 +29,6 @@ span.psw {
     padding: 10px 18px;
     background-color: #3672f4;
 }*/
-
 
 button {
   box-shadow: 0px 10px 14px -7px #276873;
@@ -41,17 +44,16 @@ button {
   padding: 13px 22px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #3d768a;
-} 
+}
 button:hover {
-    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-    background-color: #408c99;
-  } 
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
+}
 .container {
   padding: 16px;
-  
 }
-.formconteiner{
-    max-width: 600px;
-    
-    margin:auto 0 ;
+.formconteiner {
+  max-width: 800px;
+
+  margin: auto 0;
 }

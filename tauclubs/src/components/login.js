@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import Cookies from "universal-cookie";
 
 class Login extends Component {
   state = {
     credentials: { email: "", password: "" },
   };
 
+  // cookies = new Cookies();
   login = (event) => {
     fetch("http://127.0.0.1:8000/dj-rest-auth/login/", {
       method: "POST",
@@ -13,9 +15,16 @@ class Login extends Component {
     })
       .then(console.log(this.state.credentials))
       .then((data) => data.json())
-      .then((data) => {
-        this.props.userLogin(data.token);
-      })
+      // .then((response) => {
+      //   // Save the authentication key in local storage
+      //   // localStorage.setItem("authKey", data.authKey);
+      //   // Redirect the user to the home page
+      //   // this.props.history.push("/");
+      //   console.log(response);
+      // })
+      // .then((data) => {
+      //   this.props.userLogin(data.token);
+      // })
       .catch((error) => console.error(error));
   };
 
@@ -28,23 +37,25 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <h1>Login user form</h1>
-
-        <label>
-          Email:
+        <label className="w-100">
+          <b>Email:</b>
           <input
             type="text"
             name="email"
+            placeholder="Email"
+            required
             value={this.state.credentials.email}
             onChange={this.inputChanged}
           />
         </label>
         <br />
-        <label>
-          Password:
+        <label className="w-100">
+          <b>Password:</b>
           <input
             type="password"
             name="password"
+            placeholder="Password"
+            required
             value={this.state.credentials.password}
             onChange={this.inputChanged}
           />

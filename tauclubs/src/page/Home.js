@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Button from "@mui/material/Button";
 import BottomNavigation from "../components/BottomNavigation";
 import { Link } from "react-router-dom";
+import Register from "../components/register";
 
 const Home = () => {
   //const test = 34;
@@ -14,7 +15,7 @@ const Home = () => {
     <div>
       <header className="header">
         <header className="card-header align-items-center p-5">
-          <div className="navbar d-flex justify-content-between ">
+          <div className="container navbar d-flex justify-content-between ">
             <h1 className="sitename m-0">
               <a className="px-0" href="/">
                 <b>TAU</b>
@@ -59,8 +60,10 @@ const Home = () => {
               </Link>
             </div>
             <div>
-              <Link to= "/JoinUs">
-              <button className="myButton" href = "JoinUs">Join Us</button>
+              <Link to="/JoinUs">
+                <button className="myButton" href="JoinUs">
+                  Join Us
+                </button>
               </Link>
             </div>
           </b1>
