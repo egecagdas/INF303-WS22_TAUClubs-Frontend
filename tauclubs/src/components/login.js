@@ -9,7 +9,9 @@ class Login extends Component {
   };
 
   login = (event) => {
-    axios
+    let uninterceptedAxiosInstance = axios.create();
+
+    uninterceptedAxiosInstance
       .post("http://127.0.0.1:8000/dj-rest-auth/login/", this.state.credentials)
       .then((response) => {
         console.log(response.data.key);
