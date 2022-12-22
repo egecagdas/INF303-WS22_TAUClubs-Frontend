@@ -11,6 +11,7 @@ import JoinUs from "./page/JoinUs";
 
 export default function App() {
   let cookies = new Cookies();
+
   axios.interceptors.request.use(
     (config) => {
       config.headers["Authorization"] = `Token ${cookies.get("token")}`;

@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   cookies = new Cookies();
   state = {
     credentials: { username: "", email: "", password: "" },
+    isLoggedIn: false,
   };
 
   login = (event) => {
@@ -16,11 +18,16 @@ class Login extends Component {
       .then((response) => {
         console.log(response.data.key);
         this.cookies.set("token", response.data.key);
+        this.state.isLoggedIn = true;
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
+  // changeText = () => {
+  //   if (isLoggedIn) this.setState({ text });
+  // };
 
   // Aşağıdaki kod gereksizse silebilirsiniz
 
@@ -54,6 +61,7 @@ class Login extends Component {
   };
 
   render() {
+    // const isLoggedIn = this.state.isLoggedIn;
     return (
       <div>
         <label className="w-100">
@@ -80,7 +88,10 @@ class Login extends Component {
           />
         </label>
         <br />
+
+        {/* <Link to="/Event"> */}
         <button onClick={this.login}>Login</button>
+        {/* </Link> */}
       </div>
     );
   }

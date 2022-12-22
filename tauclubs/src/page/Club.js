@@ -9,17 +9,25 @@ function Club() {
   let { id } = useParams();
 
   let [club, setClub] = useState({});
+  let [text, setText] = useState("Follow");
+  let [isFollowed, setIsFollowed] = useState(false);
 
-  // const followclub = (club) => {
+  const followclub = (club) => {
+    let data;
+    axios
+      .get("http://localhost:8000/clubs/" + id + "/follow")
+      .then((response) => {
+        data = response.data;
+        console.log(data);
+        setIsFollowed(true);
+      });
+  };
 
-  //   let data;
-  //   axios
-  //     .get("http://localhost:8000/clubs/" + id + "/follow")
-  //     .then((response) => {
-  //       data = response.data;
-  //       console.log(data);
-  //     });
-  // };
+  const changeText = () => {
+    if (text == "Follow" && isFollowed == true) {
+      setText("Followed");
+    }
+  };
 
   // const bemamber = (club) => {
 
@@ -92,9 +100,9 @@ function Club() {
                     <a
                       href="#"
                       class="btn btn-dark btn-block"
-                      // onClick={() => followclub(club)}
+                      onClick={() => followclub(club)}
                     >
-                      Follow
+                      {text}
                     </a>
                   </div>
                   <div className="text-align-center px-5 py-2">

@@ -16,6 +16,38 @@ import PostListAll from "../components/PostListAll";
 const Events = () => {
   //const test = 34;
   //const isAuth = true;
+
+  let [user, setUser] = useState({});
+  let [clubs, setClubs] = useState({});
+  let [isLoggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    let data;
+    axios
+      .get("http://localhost:8000/dj-rest-auth/user/")
+      .then((res) => {
+        data = res.data;
+        console.log(data);
+        setUser(data);
+        console.log(user);
+        setLoggedIn(true);
+      })
+      .catch((err) => {});
+  }, []);
+
+  // useEffect(() => {
+  //   let data;
+  //   axios
+  //     .get("http://localhost:8000/posts/get_followed_clubs/")
+  //     .then((res) => {
+  //       data = res.data;
+  //       console.log(data);
+  //       setClubs(data);
+  //       console.log(clubs);
+  //     })
+  //     .catch((err) => {});
+  // }, []);
+
   return (
     <body>
       <nav className="header">
@@ -50,28 +82,34 @@ const Events = () => {
         <div className="container my-4">
           <div className="row gx-10">
             <div className="col-md-3">
-              <box className="EventInfo d-flex align-items-center shadow justify-content-center mb-4">
+              <box
+                className="EventInfo d-flex align-items-center shadow justify-content-center mb-4"
+                style={{ visibility: isLoggedIn ? "visible" : "hidden" }}
+              >
                 {/* <div className="clubInfo"> */}
 
                 <div>
-                  <section className="userName">{"Ayşe"}</section>
+                  <section className="userName">{user.email}</section>
                   <section className="userDescription">
                     {"Student-User"}
                   </section>
                 </div>
               </box>
-              <box className="EventInfo d-flex align-items-center shadow justify-content-center">
+              <box
+                className="EventInfo d-flex align-items-center shadow justify-content-center"
+                style={{ visibility: isLoggedIn ? "visible" : "hidden" }}
+              >
                 <div>
                   <section className="Follow">{"Followed Clubs"}</section>
                   <ul>
-                    <li className="text-center">{"Informatix"}</li>
-                    <li className="text-center">{"EMK"}</li>
+                    {/* {this.clubs.map((club) => (
+                      <li className="text-center">{club}</li>
+                    ))} */}
                   </ul>
                 </div>
               </box>
             </div>
             <div className="col-md-9">
-              It's me.. Hi! I'm the problem. It's me.
               {/* <div className="card mb-2 m-auto shadow">
                       <div className="row d-flex justify-content-center">
                             <div className="col">
