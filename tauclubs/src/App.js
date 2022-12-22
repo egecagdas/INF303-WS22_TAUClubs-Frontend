@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import axios from "axios";
+import Cookies from "universal-cookie";
 
 import Home from "./page/Home";
 import Club from "./page/Club";
@@ -8,6 +10,17 @@ import Events from "./page/Events";
 import JoinUs from "./page/JoinUs";
 
 export default function App() {
+  let cookies = new Cookies();
+  axios.interceptors.request.use(
+    (config) => {
+      config.headers["Authorization"] = `Token ${cookies.get("token")}`;
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  );
+
   return (
     <BrowserRouter>
       <Routes>
