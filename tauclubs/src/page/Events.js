@@ -12,13 +12,26 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import ClubList from "../components/ClubList";
 import PostListAll from "../components/PostListAll";
+import PostListFollowed from "../components/PostListFollowed";
 
 const Events = () => {
   //const test = 34;
   //const isAuth = true;
 
   let [user, setUser] = useState({});
-  let [clubs, setClubs] = useState({});
+  let [component, setComponent] = useState(<PostListAll />);
+  let [clubs, setClubs] = useState([
+    {
+      id: 1,
+      name: "You can follow clubs!",
+      manager: "",
+      members: [],
+      pending_members: [],
+      responsibleLecturer: "",
+      clubMail: "",
+      followers: [],
+    },
+  ]);
   let [isLoggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -35,18 +48,26 @@ const Events = () => {
       .catch((err) => {});
   }, []);
 
-  // useEffect(() => {
-  //   let data;
-  //   axios
-  //     .get("http://localhost:8000/posts/get_followed_clubs/")
-  //     .then((res) => {
-  //       data = res.data;
-  //       console.log(data);
-  //       setClubs(data);
-  //       console.log(clubs);
-  //     })
-  //     .catch((err) => {});
-  // }, []);
+  useEffect(() => {
+    let data;
+    axios
+      .get("http://localhost:8000/posts/get_followed_clubs/")
+      .then((res) => {
+        data = res.data;
+        console.log(data);
+        setClubs(data);
+        console.log(clubs);
+      })
+      .catch((err) => {});
+  }, []);
+
+  const postAll = () => {
+    setComponent(<PostListAll />);
+  };
+
+  const postFollowed = () => {
+    setComponent(<PostListFollowed />);
+  };
 
   return (
     <body>
@@ -102,26 +123,37 @@ const Events = () => {
                 <div>
                   <section className="Follow">{"Followed Clubs"}</section>
                   <ul>
-                    {/* {this.clubs.map((club) => (
-                      <li className="text-center">{club}</li>
-                    ))} */}
+                    {clubs !== undefined &&
+                      clubs.map((club) => (
+                        <li className="text-center">{club.name}</li>
+                      ))}
+
+                    {/* {clubs.length ? (
+                      () => {
+                        {
+                          this.clubs.map((club) => (
+                            <li className="text-center">{club.name}</li>
+                          ));
+                        }
+                      }
+                    ) : (
+                      <></>
+                    )} */}
                   </ul>
                 </div>
               </box>
             </div>
             <div className="col-md-9">
-              {/* <div className="card mb-2 m-auto shadow">
-                      <div className="row d-flex justify-content-center">
-                            <div className="col">
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card Title</h5>
-                                        <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ipsam quo ab doloribus doloremque. Fugiat!</p>
-                                    </div>  
-                                
-                            </div>
-                      </div>  
-                </div> */}
-              <PostListAll />
+              <div>
+                <button className="button" onClick={postAll}>
+                  All Post
+                </button>
+                <button className="button" onClick={postFollowed}>
+                  Post of followed clubs
+                </button>
+              </div>
+              {component}
+              {/* <PostListAll /> */}
             </div>
           </div>
         </div>

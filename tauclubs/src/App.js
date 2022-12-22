@@ -15,6 +15,7 @@ export default function App() {
   axios.interceptors.request.use(
     (config) => {
       config.headers["Authorization"] = `Token ${cookies.get("token")}`;
+      // config.headers["Access-Control-Allow-Origin"] = `*`;
       return config;
     },
     (error) => {

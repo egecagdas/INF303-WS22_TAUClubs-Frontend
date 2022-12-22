@@ -9,25 +9,29 @@ function Club() {
   let { id } = useParams();
 
   let [club, setClub] = useState({});
+  let [user, setUser] = useState({});
   let [text, setText] = useState("Follow");
   let [isFollowed, setIsFollowed] = useState(false);
 
   const followclub = (club) => {
     let data;
     axios
-      .get("http://localhost:8000/clubs/" + id + "/follow")
+      .get("http://localhost:8000/clubs/" + id + "/follow/")
       .then((response) => {
         data = response.data;
         console.log(data);
         setIsFollowed(true);
+      })
+      .then(() => {
+        setText("Followed");
       });
   };
 
-  const changeText = () => {
-    if (text == "Follow" && isFollowed == true) {
-      setText("Followed");
-    }
-  };
+  // const changeText = () => {
+  //   if (text == "Follow" && isFollowed == true) {
+  //     setText("Followed");
+  //   }
+  // };
 
   // const bemamber = (club) => {
 
@@ -52,6 +56,44 @@ function Club() {
       })
       .catch((err) => {});
   }, []);
+
+  useEffect(() => {
+    let data;
+    axios
+      .get("http://localhost:8000/dj-rest-auth/user/")
+      .then((res) => {
+        data = res.data;
+        console.log(data);
+        setUser(data);
+        console.log(user);
+        // console.log(user);
+      })
+      .catch((err) => {});
+  });
+
+  // useEffect(() => {
+  //   // let check =
+  //   // for(let i = 0; i < club.followers.length; i++) {
+  //   //   if(club[i] == user.pk) {
+
+  //   //   }
+  //   // }
+
+  //   club.followers.some((follower) => {
+  //     if (follower === user.pk) {
+  //       setText("Followed");
+  //     } else {
+  //       setText("Follow");
+  //     }
+  //   });
+
+  //   // 👇️ check if array contains object
+  //   // if (club.followers.includes(user.pk)) {
+  //   //   setText("Followed");
+  //   // } else {
+  //   //   setText("Follow");
+  //   // }
+  // });
 
   return (
     <body>
