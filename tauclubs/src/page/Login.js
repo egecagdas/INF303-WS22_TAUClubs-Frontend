@@ -2,6 +2,7 @@ import "./login.css";
 import "../App.css";
 import * as React from "react";
 import LoginForm from "../components/login";
+import { Link } from "react-router-dom";
 // import LoginForm from "../components/logincopy";
 
 function Login() {
@@ -68,6 +69,13 @@ function Login() {
             </div> */}
 
             <LoginForm />
+            <p className="mt-2">Don't Have an Account?
+              <Link to="/JoinUs">
+                <a className='px-1' href="JoinUs">
+                  Join Us
+                </a>
+              </Link>
+            </p>
           </div>
         </div>
       </main>
